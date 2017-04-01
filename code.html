@@ -845,28 +845,33 @@
 	var golden_epic_chance      =   24;
 	var golden_legendary_chance =    9;
 
-
 	var cardIndex = 0;
+	var commonsIndex = 0;
 	
 	while (cardIndex < 5) {
 		var randomCardIndex = Math.floor(Math.random() * (common_chance + rare_chance));
 
 		if (randomCardIndex <= common_chance + rare_chance && randomCardIndex > rare_chance) {
-			document.write(getCard(commons);
+			commonsIndex++;
+
+			if (commonsIndex == 5)
+				document.write(getCard(rares));
+			else
+				document.write(getCard(commons));
 		} else if (randomCardIndex <= rare_chance + epic_chance && randomCardIndex > epic_chance) {
-			document.write(getCard(rares);
+			document.write(getCard(rares));
 		} else if (randomCardIndex <= epic_chance + legendary_chance && randomCardIndex > legendary_chance) {	
-			document.write(getCard(epics);
+			document.write(getCard(epics));
 		} else if (randomCardIndex <= golden_common_chance + golden_rare_chance && randomCardIndex > golden_rare_chance) {
-			document.write(getGoldenCard(golden_commons);
+			document.write(getGoldenCard(golden_commons));
 		} else if (randomCardIndex <= golden_rare_chance + legendary_chance && randomCardIndex > legendary_chance) {
-			document.write(getGoldenCard(golden_rare);
+			document.write(getGoldenCard(golden_rare));
 		} else if (randomCardIndex <= legendary_chance + golden_epic_chance && randomCardIndex > golden_epic_chance) {
-			document.write(getCard(legendaries);
+			document.write(getCard(legendaries));
 		} else if (randomCardIndex <= golden_epic_chance + golden_legendary_chance && randomCardIndex > golden_legendary_chance) {
-			document.write(getGoldenCard(golden_epics);
+			document.write(getGoldenCard(golden_epics));
 		} else {
-			document.write(getGoldenCard(golden_legendaries);
+			document.write(getGoldenCard(golden_legendaries));
 		}
 
 		cardIndex++;
