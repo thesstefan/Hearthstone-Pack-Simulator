@@ -1,0 +1,878 @@
+<html>
+<head>
+<title> Test </title>
+<script type="text/javascript">
+	var golden_legendaries = [
+		// Kun the Forgotten King (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/628/49628.webm",
+
+		// Krul the Unshackled (Golden)	
+		"https://media-hearth.cursecdn.com/goldCards/49/744/49744.webm",
+
+	 	// Mayor Noggenfogger (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/756/49756.webm",
+
+		// Don Han'Cho (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/683/49683.webm",
+
+		// Inkmaster Solia (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/693/49693.webm",
+
+		// Aya Blackpaw (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/706/49706.webm",
+
+		// Madam Goya (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/684/49684.webm",
+
+		// Wrathion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/731/49731.webm",
+
+		// Finja, the Flying Star (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/632/49632.webm",
+
+		// Knuckles (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/682/49682.webm",
+
+		// Raza the Chained (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/702/49702.webm",
+
+		// White Eyes (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/726/49726.webm",
+
+		// Genzo, the Shark (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/737/49737.webm",
+
+		// Kazakus (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/622/49622.webm",
+
+		// Auctionmaster Beardo (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/659/49659.webm",
+
+		// Sergeant Sally (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/728/49728.webm",
+
+		// Shaku, the Collector (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/657/49657.webm",
+
+		// Wickerflame Burnbristle (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/633/49633.webm",
+
+		// Hobart Grapplehammer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/729/49729.webm",
+
+		// Patches the Pirate (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/624/49624.webm"
+
+
+	];
+
+	var golden_epics = [
+		// Greater Arcane Missiles (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/740/49740.webm",
+		
+		// Dragonfire Potion (Golden)
+	        "https://media-hearth.cursecdn.com/goldCards/49/648/49648.webm",	
+	
+		// Defias Cleaner (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/738/49738.webm",
+
+		// Fight Promoter (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/712/49712.webm",
+	
+		// Kabal Trafficker (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/742/49742.webm",
+
+		// Leatherclad Hogleader (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/686/49686.webm",
+
+		// Luckydo Buccaneer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/754/49754.webm",
+
+		// Wind-up Burglebot (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/647/49647.webm",
+
+		// Piranha Launcher (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/618/49618.webm",
+
+		// Lunar Visions (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/635/49635.webm",
+
+		// Burgly Bully (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/704/49704.webm",
+
+		// Lotus Assasin (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/619/49619.webm",
+
+		// Brass Knuckles (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/680/49680.webm",
+
+		// Lotus Illusionist (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/751/49751.webm",
+
+		// Pilfered Power (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/636/49636.webm",
+
+		// Small-Time Recruits (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/631/49631.webm",
+
+		// Blubber Baron (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/760/49760.webm",
+
+		// Fel Orc Soulfiend (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/639/49639.webm",
+
+		// Manic Soulcaster (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/637/49637.webm",
+
+		// Rat Pack (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/681/49681.webm",
+
+		// Unlicensed Apothecary (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/747/49747.webm",
+
+		// Sleep with the Fishes (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/746/49746.webm",
+
+		// Dirty Rat (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/673/49673.webm",
+
+		// Mana Geode (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/705/49705.webm",
+
+		// Finders Keepers (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/749/49749.webm",
+		
+		// Meanstreet Marshal (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/641/49641.webm",
+
+		// Weasel Tunneler (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/758/49758.webm"
+	];
+
+	var golden_rares = [
+		// Grimestreet Protector (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/678/49678.webm",
+
+		// Felfire Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/699/49699.webm",
+
+		// Kabal Crystal Runner (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/700/49700.webm",
+
+		// Alley Armorsmith (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/663/49663.webm",
+
+		// Bomb Squad (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/696/49696.webm",
+
+		// Doppelgangster (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/677/49677.webm",
+
+		// Drakonid Operative (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/638/49638.webm",
+
+		// Grimestreet Enforcer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/667/49667.webm",
+
+		// Lotus Agent (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/629/49629.webm",
+
+		// Second-Rate Bruiser (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/626/49626.webm",
+
+		// Spiked Hogrider (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/687/49687.webm",
+
+		// Virmen Sensei (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/721/49721.webm",
+
+		// Greater Healing Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/755/49755.webm",
+
+		// Backroom Bouncer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/675/49675.webm",
+
+		// Dispatch Kodo (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/674/49674.webm",
+
+		// Jinyu Waterspeaker (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/719/49719.webm",
+
+		// Seadevil Stinger (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/695/49695.webm",
+		
+		// Shadow Sensei (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/725/49725.webm",
+
+		// Bloodfury Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/698/49698.webm",
+
+		// Potion of Polymorph (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/694/49694.webm",
+
+		// Volcanic Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/689/49689.webm",
+
+		// Celestial Dreamer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/748/49748.webm",
+
+		// Grimestreet Pawnbroker (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/668/49668.webm",
+
+		// Kabal Courier (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/621/49621.webm",
+
+		// Jade Claws (Golden) 
+		"https://media-hearth.cursecdn.com/goldCards/49/724/49724.webm",
+
+		// Devolve (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/715/49715.webm",
+
+		// Hidden Cache (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/736/49736.webm",
+
+		// Stolen Goods (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/661/49661.webm",
+
+		// Gadgetzan Ferryman (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/722/49722.webm",
+
+		// Grimestreet Informant (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/627/49627.webm",
+
+		// Trogg Beastrager (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/660/49660.webm",
+
+		// Getaway Kodo (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/640/49640.webm",
+
+		// Jade Idol (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/714/49714.webm",
+
+		// Pint-Size Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/644/49644.webm",
+
+		// Small-Time Buccaneer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/759/49759.webm",
+
+		// Counterfeit Coin (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/643/49643.webm"
+	];
+
+	var golden_commons = [
+		// Abyssal Enforcer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/691/49691.webm",
+
+		// Jade Chieftain (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/720/49720.webm",
+
+		// Ancient of Blossoms (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/733/49733.webm",
+
+		// Big-Time Racketeer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/625/49625.webm",
+
+		// Jade Behemont (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/718/49718.webm",
+
+		// Cryomancer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/739/49739.webm",
+
+		// Grook Fu Master (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/658/49658.webm",
+
+		// Kabal Songstealer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/753/49753.webm",
+
+		// Red Mana Wyrm (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/762/49762.webm",
+
+		// Streetwise Investigator (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/757/49757.webm",
+
+		// Blastcrystal Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/741/49741.webm",
+
+		// Call in the Finishers (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/716/49716.webm",
+
+		// Jade Lightning (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/707/49707.webm",
+	
+		// Crystalweaver (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/750/49750.webm",
+
+		// Daring Reporter (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/723/49723.webm",
+
+		// Grimy Gadgeteer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/679/49679.webm",
+
+		// Hozen Healer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/710/49710.webm",
+
+		// Jade Spirit (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/708/49708.webm",
+
+		// Kabal Chemist (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/690/49690.webm",
+
+		// Kooky Chemist (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/634/49634.webm",
+
+		// Naga Corsair (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/730/49730.webm",
+
+		// Tanaris Hogehopper (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/688/49688.webm",
+
+		// Worgen Greaser (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/670/49670.webm",
+
+		// Jade Blossom (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/703/49703.webm",
+
+		// Blackstreet Leper (Golden) 
+		"https://media-hearth.cursecdn.com/goldCards/49/697/49697.webm",
+
+		// Grimestreet Smuggler (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/664/49664.webm",
+
+		// Hired Gun (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/671/49671.webm",
+
+		// Kabal Talonpriest (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/620/49620.webm",
+
+		// Shadow Rager (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/752/49752.webm",
+
+		// Shaky Zipgunner (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/669/49669.webm",
+
+		// Street Trickster (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/761/49761.webm",
+
+		// Toxic Sewer Ooze (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/701/49701.webm",
+
+		// Jade Shuriken (Golden) 
+		"https://media-hearth.cursecdn.com/goldCards/49/711/49711.webm",
+
+		// Blowgill Sniper (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/672/49672.webm",
+
+		// Friendly Bartender (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/645/49645.webm",
+
+		// Gadgetzan Socialite (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/743/49743.webm",
+
+		// Grimestreet Outfitter (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/662/49662.webm",
+
+		// Jade Swarmer (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/713/49713.webm",
+
+		// Public Defender (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/732/49732.webm",
+
+		// I Know a Guy (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/623/49623.webm",
+
+		// Mark of the Lotus (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/642/49642.webm",
+
+		// Potion of Madness (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/630/49630.webm",
+
+		// Smuggler's Crate (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/735/49735.webm",
+
+		// Smuggler's Run (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/676/49676.webm",
+
+		// Alleycat (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/745/49745.webm",
+
+		// Grimscale Chum (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/685/49685.webm",
+
+		// Kabal Lackey (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/692/49692.webm",
+
+		// Mistress of Mixtures (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/646/49646.webm",
+
+		// Freezing Potion (Golden)
+		"https://media-hearth.cursecdn.com/goldCards/49/734/49734.webm"
+	];
+
+	var legendaries = [
+		// Kun the Forgotten King
+		"https://media-hearth.cursecdn.com/avatars/309/35/49628.png",
+
+		// Krul the Unshackled	
+		"https://media-hearth.cursecdn.com/avatars/309/344/49744.png",
+
+	 	// Mayor Noggenfogger
+		"https://media-hearth.cursecdn.com/avatars/309/287/49756.png",
+
+		// Don Han'Cho
+		"https://media-hearth.cursecdn.com/avatars/309/296/49683.png",
+
+		// Inkmaster Solia
+		"https://media-hearth.cursecdn.com/avatars/309/299/49693.png",
+
+		// Aya Blackpaw
+		"https://media-hearth.cursecdn.com/avatars/309/422/49706.png",
+
+		// Madam Goya 
+		"https://media-hearth.cursecdn.com/avatars/309/293/49684.png",
+
+		// Wrathion 
+		"https://media-hearth.cursecdn.com/avatars/309/380/49731.png",
+
+		// Finja, the Flying Star 
+		"https://media-hearth.cursecdn.com/avatars/309/110/49632.png",
+
+		// Knuckles 
+		"https://media-hearth.cursecdn.com/avatars/309/83/49682.png",
+
+		// Raza the Chained 
+		"https://media-hearth.cursecdn.com/avatars/308/984/49702.png",
+
+		// White Eyes 
+		"https://media-hearth.cursecdn.com/avatars/309/71/49726.png",
+
+		// Genzo, the Shark 
+		"https://media-hearth.cursecdn.com/avatars/309/386/49737.png",
+
+		// Kazakus
+		"https://media-hearth.cursecdn.com/avatars/309/164/49622.png",
+
+		// Auctionmaster Beardo 
+		"https://media-hearth.cursecdn.com/avatars/309/383/49659.png",
+
+		// Sergeant Sally
+		"https://media-hearth.cursecdn.com/avatars/309/101/49728.png",
+
+		// Shaku, the Collector
+		"https://media-hearth.cursecdn.com/avatars/309/371/49657.png",
+
+		// Wickerflame Burnbristle
+		"https://media-hearth.cursecdn.com/avatars/309/398/49633.png",
+
+		// Hobart Grapplehammer
+		"https://media-hearth.cursecdn.com/avatars/309/206/49729.png",
+
+		// Patches the Pirate
+		"https://media-hearth.cursecdn.com/avatars/309/200/49624.png"
+	];
+
+	var epics = [
+		// Greater Arcane Missiles
+		"https://media-hearth.cursecdn.com/avatars/309/182/49740.png",
+		
+		// Dragonfire Potion 
+	        "https://media-hearth.cursecdn.com/avatars/309/260/49648.png",	
+	
+		// Defias Cleaner 
+		"https://media-hearth.cursecdn.com/avatars/309/416/49738.png",
+
+		// Fight Promoter 
+		"https://media-hearth.cursecdn.com/avatars/309/80/49712.png",
+	
+		// Kabal Trafficker 
+		"https://media-hearth.cursecdn.com/avatars/309/263/49742.png",
+
+		// Leatherclad Hogleader 
+		"https://media-hearth.cursecdn.com/avatars/309/392/49686.png",
+
+		// Luckydo Buccaneer 
+		"https://media-hearth.cursecdn.com/avatars/309/104/49754.png",
+
+		// Wind-up Burglebot 
+		"https://media-hearth.cursecdn.com/avatars/308/990/49647.png",
+
+		// Piranha Launcher
+		"https://media-hearth.cursecdn.com/avatars/310/951/49618.png",
+
+		// Lunar Visions 
+		"https://media-hearth.cursecdn.com/avatars/309/395/49635.png",
+
+		// Burgly Bully 
+		"https://media-hearth.cursecdn.com/avatars/309/284/49704.png",
+
+		// Lotus Assasin 
+		"https://media-hearth.cursecdn.com/avatars/309/194/49619.png",
+
+		// Brass Knuckles 
+		"https://media-hearth.cursecdn.com/avatars/309/191/49680.png",
+
+		// Lotus Illusionist 
+		"https://media-hearth.cursecdn.com/avatars/309/320/49751.png",
+
+		// Pilfered Power 
+		"https://media-hearth.cursecdn.com/avatars/309/152/49636.png",
+
+		// Small-Time Recruits 
+		"https://media-hearth.cursecdn.com/avatars/309/425/49631.png",
+
+		// Blubber Baron 
+		"https://media-hearth.cursecdn.com/avatars/309/11/49760.png",
+
+		// Fel Orc Soulfiend 
+		"https://media-hearth.cursecdn.com/avatars/309/140/49639.png",
+
+		// Manic Soulcaster 
+		"https://media-hearth.cursecdn.com/avatars/309/254/49637.png",
+
+		// Rat Pack 
+		"https://media-hearth.cursecdn.com/avatars/309/62/49681.png",
+
+		// Unlicensed Apothecary 
+		"https://media-hearth.cursecdn.com/avatars/309/419/49747.png",
+
+		// Sleep with the Fishes 
+		"https://media-hearth.cursecdn.com/avatars/309/338/49746.png",
+
+		// Dirty Rat 
+		"https://media-hearth.cursecdn.com/avatars/309/374/49673.png",
+
+		// Mana Geode 
+		"https://media-hearth.cursecdn.com/avatars/309/131/49705.png",
+
+		// Finders Keepers 
+		"https://media-hearth.cursecdn.com/avatars/309/53/49749.png",
+		
+		// Meanstreet Marshal 
+		"https://media-hearth.cursecdn.com/avatars/309/365/49641.png",
+
+		// Weasel Tunneler 
+		"https://media-hearth.cursecdn.com/avatars/309/26/49758.png"
+	];
+
+	var rares = [
+		// Grimestreet Protector
+		"https://media-hearth.cursecdn.com/avatars/309/5/49678.png",
+
+		// Felfire Potion
+		"https://media-hearth.cursecdn.com/avatars/309/23/49699.png",
+
+		// Kabal Crystal Runner
+		"https://media-hearth.cursecdn.com/avatars/309/368/49700.png",
+
+		// Alley Armorsmith
+		"https://media-hearth.cursecdn.com/avatars/309/362/49663.png",
+
+		// Bomb Squad 
+		"https://media-hearth.cursecdn.com/avatars/309/272/49696.png",
+
+		// Doppelgangster 
+		"https://media-hearth.cursecdn.com/avatars/309/275/49677.png",
+
+		// Drakonid Operative 
+		"https://media-hearth.cursecdn.com/avatars/309/128/49638.png",
+
+		// Grimestreet Enforcer 
+		"https://media-hearth.cursecdn.com/avatars/309/203/49667.png",
+
+		// Lotus Agent
+		"https://media-hearth.cursecdn.com/avatars/309/407/49629.png",
+
+		// Second-Rate Bruiser
+		"https://media-hearth.cursecdn.com/avatars/309/230/49626.png",
+
+		// Spiked Hogrider 
+		"https://media-hearth.cursecdn.com/avatars/309/302/49687.png",
+
+		// Virmen Sensei 
+		"https://media-hearth.cursecdn.com/avatars/309/401/49721.png",
+
+		// Greater Healing Potion 
+		"https://media-hearth.cursecdn.com/avatars/309/125/49755.png",
+
+		// Backroom Bouncer
+		"https://media-hearth.cursecdn.com/avatars/309/248/49675.png",
+
+		// Dispatch Kodo 
+		"https://media-hearth.cursecdn.com/avatars/309/86/49674.png",
+
+		// Jinyu Waterspeaker 
+		"https://media-hearth.cursecdn.com/avatars/309/2/49719.png",
+
+		// Seadevil Stinger
+		"https://media-hearth.cursecdn.com/avatars/309/323/49695.png",
+		
+		// Shadow Sensei 
+		"https://media-hearth.cursecdn.com/avatars/309/314/49725.png",
+
+		// Bloodfury Potion
+		"https://media-hearth.cursecdn.com/avatars/309/146/49698.png",
+
+		// Potion of Polymorph
+		"https://media-hearth.cursecdn.com/avatars/309/161/49694.png",
+
+		// Volcanic Potion
+		"https://media-hearth.cursecdn.com/avatars/309/14/49689.png",
+
+		// Celestial Dreamer
+		"https://media-hearth.cursecdn.com/avatars/309/155/49748.png",
+
+		// Grimestreet Pawnbroker
+		"https://media-hearth.cursecdn.com/avatars/309/359/49668.png",
+
+		// Kabal Courier 
+		"https://media-hearth.cursecdn.com/avatars/309/221/49621.png",
+
+		// Jade Claws 
+		"https://media-hearth.cursecdn.com/avatars/309/341/49724.png",
+
+		// Devolve 
+		"https://media-hearth.cursecdn.com/avatars/309/317/49715.png",
+
+		// Hidden Cache
+		"https://media-hearth.cursecdn.com/avatars/308/993/49736.png",
+
+		// Stolen Goods 
+		"https://media-hearth.cursecdn.com/avatars/309/350/49661.png",
+
+		// Gadgetzan Ferryman
+		"https://media-hearth.cursecdn.com/avatars/309/311/49722.png",
+
+		// Grimestreet Informant 
+		"https://media-hearth.cursecdn.com/avatars/309/68/49627.png",
+
+		// Trogg Beastrager 
+		"https://media-hearth.cursecdn.com/avatars/309/98/49660.png",
+
+		// Getaway Kodo 
+		"https://media-hearth.cursecdn.com/avatars/309/377/49640.png",
+
+		// Jade Idol 
+		"https://media-hearth.cursecdn.com/avatars/309/113/49714.png",
+
+		// Pint-Size Potion 
+		"https://media-hearth.cursecdn.com/avatars/309/257/49644.png",
+
+		// Small-Time Buccaneer 
+		"https://media-hearth.cursecdn.com/avatars/317/614/49759.png",
+
+		// Counterfeit Coin 
+		"https://media-hearth.cursecdn.com/avatars/309/188/49643.png"
+	];
+
+	var commons = [
+		// Abyssal Enforcer
+		"https://media-hearth.cursecdn.com/avatars/309/347/49691.png",
+
+		// Jade Chieftain 
+		"https://media-hearth.cursecdn.com/avatars/309/50/49720.png",
+
+		// Ancient of Blossoms 
+		"https://media-hearth.cursecdn.com/avatars/309/413/49733.png",
+
+		// Big-Time Racketeer
+		"https://media-hearth.cursecdn.com/avatars/309/215/49625.png",
+
+		// Jade Behemont 
+		"https://media-hearth.cursecdn.com/avatars/309/107/49718.png",
+
+		// Cryomancer 
+		"https://media-hearth.cursecdn.com/avatars/309/290/49739.png",
+
+		// Grook Fu Master 
+		"https://media-hearth.cursecdn.com/avatars/309/269/49658.png",
+
+		// Kabal Songstealer 
+		"https://media-hearth.cursecdn.com/avatars/309/245/49753.png",
+
+		// Red Mana Wyrm 
+		"https://media-hearth.cursecdn.com/avatars/308/999/49762.png",
+
+		// Streetwise Investigator 
+		"https://media-hearth.cursecdn.com/avatars/309/242/49757.png",
+
+		// Blastcrystal Potion 
+		"https://media-hearth.cursecdn.com/avatars/309/137/49741.png",
+
+		// Call in the Finishers 
+		"https://media-hearth.cursecdn.com/avatars/309/44/49716.png",
+
+		// Jade Lightning 
+		"https://media-hearth.cursecdn.com/avatars/309/326/49707.png",
+	
+		// Crystalweaver
+		"https://media-hearth.cursecdn.com/avatars/309/143/49750.png",
+
+		// Daring Reporter 
+		"https://media-hearth.cursecdn.com/avatars/309/404/49723.png",
+
+		// Grimy Gadgeteer 
+		"https://media-hearth.cursecdn.com/avatars/309/356/49679.png",
+
+		// Hozen Healer 
+		"https://media-hearth.cursecdn.com/avatars/309/20/49710.png",
+
+		// Jade Spirit 
+		"https://media-hearth.cursecdn.com/avatars/309/335/49708.png",
+
+		// Kabal Chemist 
+		"https://media-hearth.cursecdn.com/avatars/309/158/49690.png",
+
+		// Kooky Chemist
+		"https://media-hearth.cursecdn.com/avatars/309/8/49634.png",
+
+		// Naga Corsair 
+		"https://media-hearth.cursecdn.com/avatars/309/227/49730.png",
+
+		// Tanaris Hogehopper
+		"https://media-hearth.cursecdn.com/avatars/309/389/49688.png",
+
+		// Worgen Greaser
+		"https://media-hearth.cursecdn.com/avatars/309/266/49670.png",
+
+		// Jade Blossom
+		"https://media-hearth.cursecdn.com/avatars/309/332/49703.png",
+
+		// Blackstreet Leper
+		"https://media-hearth.cursecdn.com/avatars/309/209/49697.png",
+
+		// Grimestreet Smuggler
+		"https://media-hearth.cursecdn.com/avatars/309/410/49664.png",
+
+		// Hired Gun
+		"https://media-hearth.cursecdn.com/avatars/309/233/49671.png",
+
+		// Kabal Talonpriest
+		"https://media-hearth.cursecdn.com/avatars/309/185/49620.png",
+
+		// Shadow Rager 
+		"https://media-hearth.cursecdn.com/avatars/309/197/49752.png",
+
+		// Shaky Zipgunner
+		"https://media-hearth.cursecdn.com/avatars/309/89/49669.png",
+
+		// Street Trickster 
+		"https://media-hearth.cursecdn.com/avatars/308/996/49761.png",
+
+		// Toxic Sewer Ooze 
+		"https://media-hearth.cursecdn.com/avatars/309/239/49701.png",
+
+		// Jade Shuriken  
+		"https://media-hearth.cursecdn.com/avatars/309/305/49711.png",
+
+		// Blowgill Sniper 
+		"https://media-hearth.cursecdn.com/avatars/309/212/49672.png",
+
+		// Friendly Bartender 
+		"https://media-hearth.cursecdn.com/avatars/309/236/49645.png",
+
+		// Gadgetzan Socialite 
+		"https://media-hearth.cursecdn.com/avatars/309/251/49743.png",
+
+		// Grimestreet Outfitter 
+		"https://media-hearth.cursecdn.com/avatars/309/353/49662.png",
+
+		// Jade Swarmer 
+		"https://media-hearth.cursecdn.com/avatars/309/308/49713.png",
+
+		// Public Defender 
+		"https://media-hearth.cursecdn.com/avatars/309/32/49732.png",
+
+		// I Know a Guy 
+		"https://media-hearth.cursecdn.com/avatars/309/428/49887.png",
+
+		// Mark of the Lotus 
+		"https://media-hearth.cursecdn.com/avatars/309/149/49642.png",
+
+		// Potion of Madness 
+		"https://media-hearth.cursecdn.com/avatars/309/122/49630.png",
+
+		// Smuggler's Crate 
+		"https://media-hearth.cursecdn.com/avatars/310/703/49735.png",
+
+		// Smuggler's Run 
+		"https://media-hearth.cursecdn.com/avatars/310/700/49676.png",
+
+		// Alleycat 
+		"https://media-hearth.cursecdn.com/avatars/309/56/49745.png",
+
+		// Grimscale Chum 
+		"https://media-hearth.cursecdn.com/avatars/309/224/49685.png",
+
+		// Kabal Lackey 
+		"https://media-hearth.cursecdn.com/avatars/309/17/49692.png",
+
+		// Mistress of Mixtures 
+		"https://media-hearth.cursecdn.com/avatars/309/29/49646.png",
+
+		// Freezing Potion 
+		"https://media-hearth.cursecdn.com/avatars/308/987/49734.png"
+	];
+
+
+	function getGoldenCard(tier) {
+		var card = '<video autoplay loop> <source src=\"';
+		var randomIndex = Math.floor(Math.random() * tier.length);
+		card += tier[randomIndex];
+		card += '\"> </video>';
+		return card;
+	}
+
+	function getCard(tier) {
+		var card = '<img src=\"';
+		var randomIndex = Math.floor(Math.random() * tier.length);
+		card += tier[randomIndex];
+		card += '\" alt=\"Error\"/>';
+		return card;
+	}
+
+</script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+	var common_chance           = 7009;
+	var rare_chance	            = 2156;
+	var epic_chance             =  415;
+	var legendary_chance        =  101;
+
+	var golden_common_chance    =  151;
+	var golden_rare_chance      =  135;
+	var golden_epic_chance      =   24;
+	var golden_legendary_chance =    9;
+
+
+	var cardIndex = 0;
+	
+	while (cardIndex < 5) {
+		var randomCardIndex = Math.floor(Math.random() * (common_chance + rare_chance));
+
+		if (randomCardIndex <= common_chance + rare_chance && randomCardIndex > rare_chance) {
+			document.write(getCard(commons);
+		} else if (randomCardIndex <= rare_chance + epic_chance && randomCardIndex > epic_chance) {
+			document.write(getCard(rares);
+		} else if (randomCardIndex <= epic_chance + legendary_chance && randomCardIndex > legendary_chance) {	
+			document.write(getCard(epics);
+		} else if (randomCardIndex <= golden_common_chance + golden_rare_chance && randomCardIndex > golden_rare_chance) {
+			document.write(getGoldenCard(golden_commons);
+		} else if (randomCardIndex <= golden_rare_chance + legendary_chance && randomCardIndex > legendary_chance) {
+			document.write(getGoldenCard(golden_rare);
+		} else if (randomCardIndex <= legendary_chance + golden_epic_chance && randomCardIndex > golden_epic_chance) {
+			document.write(getCard(legendaries);
+		} else if (randomCardIndex <= golden_epic_chance + golden_legendary_chance && randomCardIndex > golden_legendary_chance) {
+			document.write(getGoldenCard(golden_epics);
+		} else {
+			document.write(getGoldenCard(golden_legendaries);
+		}
+
+		cardIndex++;
+	}
+
+</script>
+
+</body>
+</html>
